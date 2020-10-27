@@ -26,7 +26,7 @@ mongoose
   .connect("mongodb+srv://"+process.env.MONGO_USER+":"+process.env.MONGO_PASSWORD+"@freitas.itumg.mongodb.net/"+process.env.MONGO_DB, 
   {useNewUrlParser: true, useUnifiedTopology: true})
   .then(() => {
-    app.listen(3000);
+    app.listen(process.env.PORT);
   })
   .catch(err => {
     console.log(err);
